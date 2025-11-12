@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/assets/style.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Person:<%= ID %></h1>
+    <h2> QueryString Value: <%= QSTR %> </h2>
+    <% if((typeof AGE) !== 'undefined') { %>
+        <h2><%= AGE %></h2>
+    <% } %>
+</body>
+</html>
