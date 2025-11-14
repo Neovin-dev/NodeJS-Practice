@@ -3,7 +3,6 @@ import express from 'express';
 const app = express();
 const PORT = 3000;
 
-
 let items = [
     { id: 1, name: "Naveen" },
     { id: 2, name: "Manav" },
@@ -16,6 +15,7 @@ app.use(express.json());
 
 app.get('/api/users', (request, response) => {
     console.log("hit the root");
+    response.status(200)
     response.send(items);
 })
 
@@ -27,7 +27,7 @@ app.post('/api/users/user', (request, response) => {
     }
 
     items.push(newItem);
-    response.status(200)
+    response.status(200);
     response.json(newItem);
 });
 
